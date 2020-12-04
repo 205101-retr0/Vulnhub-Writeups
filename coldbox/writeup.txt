@@ -6,7 +6,7 @@ The site was made by a guy named cold so he must b the admin and we a user named
 
 Now we do the dictionary attack on it using username as c0ldd.
 
-we change the 404.php in themes th  and add a php reverse shell code there. Now we try trigger the error by checking out various links onthe website.
+we change the 404.php in themes and add a php reverse shell code there. Now we try trigger the error by checking out various links on the website.
 
 When the error triggers we get a shell. Now we try for priv esc using setuid binaries and we try to locate if we have
 anything we can use using : find / -prem -u=s -type f 2>/dev/null
