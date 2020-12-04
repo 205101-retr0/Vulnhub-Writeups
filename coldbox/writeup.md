@@ -15,7 +15,7 @@ we find the setuid binary /usr/bin/find.
 It can be used to break out from restricted environments by spawning an interactive system shell. 
 We can use this to get root access instantly.
 
-search for GTFObin find. ./find . -exec  /bin/bash -p \; -quit
+search for [GTFObin find](https://gtfobins.github.io/gtfobins/find/). ./find . -exec  /bin/bash -p \; -quit
 
 We goto /home/c0ldd and find user.txt which gives us flag 1.
 
