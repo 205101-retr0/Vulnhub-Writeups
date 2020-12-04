@@ -1,0 +1,3 @@
+flag1 : RmVsaWNpZGFkZXMsIHByaW1lciBuaXZlbCBjb25zZWd1aWRvIQ== (Congratulations, first level achieved)
+flag2 : Congratulations, machine completed!
+
