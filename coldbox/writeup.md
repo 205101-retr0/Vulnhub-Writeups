@@ -2,9 +2,13 @@ first do an nmap scan and we find that there is only one port (80 http). Now got
 
 We dont know the users so we enumerate the users using wpscan.
 
+__wpscan --url http://ip --enumerate__
+
 The site was made by a guy named cold so he must b the admin and we a user named c0ldd.
 
 Now we do the dictionary attack on it using username as c0ldd.
+
+__wpscan --url http://ip -U c0ldd -P /usr/share/wordlists/rockyou.txt__
 
 we change the 404.php in themes and add a php reverse shell code there. Now we try trigger the error by checking out various links on the website.
 
