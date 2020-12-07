@@ -6,7 +6,7 @@ We goto /joomla/administrator to get the login form.
 But first we have to generate a wordlist for the brute-force of users.
 There is no way of enumerating users in joomla login so we try and guess the users.
 
-__cewl -m 6 http://192.168.148.128/joomla/ >> dic.txt__ --> for dictionary attack.
+__cewl -m 6 http://host_ip/joomla/ >> dic.txt__ --> for dictionary attack.
 
 Now we use burp-suite intruder to execute a dictionary attack with usernames like admin, administrator, joomla etc...
 
@@ -62,7 +62,7 @@ We can download it from the downloads dir onto the server using : __scp pspy64 p
 Running this for some time we see:
 
 ```CMD: UID=0    PID=1618   | /usr/sbin/CRON -f 
-   CMD: UID=0    PID=1619   | /bin/sh -c /home/penguin/SomeoneWhoHidesBehindAMask/.trash_old```.
+   CMD: UID=0    PID=1619   | /bin/sh -c /home/penguin/SomeoneWhoHidesBehindAMask/.trash_old```
 
 This means .old_trash is running on cron timely. We can add a nc reverse-shell to that file and keep listening on that port to get a root shell.
 
