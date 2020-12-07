@@ -28,11 +28,15 @@ Looking at the tables there is one called taskforce. They are the creds to login
 
 Trying them all only one works.
 
-##MYSQL COMMANDS 
-__show databases;\n
-use \<database>;\n
-show tables;
-select * from \<table>;__
+_*MYSQL COMMANDS*_
+
+__show databases;__
+
+__use \<database>;__
+
+__show tables;__
+
+__select * from \<table>;__
 
 __rob:???AllIHaveAreNegativeThoughts???__ --> creds to ssh login into glassglow server.
 
