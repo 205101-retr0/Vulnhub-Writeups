@@ -28,10 +28,10 @@ Looking at the tables there is one called taskforce. They are the creds to login
 
 Trying them all only one works.
 
-__show databases;__
-__use <database>;__
-__show tables;__
-__select * from <table>;__
+__show databases;
+use \<database>;
+show tables;
+select * from \<table>;__
 
 __rob:???AllIHaveAreNegativeThoughts???__ --> creds to ssh login into glassglow server.
 
@@ -60,9 +60,10 @@ Now this bit was hard. snooping around I could nothing so I used [pspy](https://
 We can download it from the downloads dir onto the server using : __scp pspy64 penguin@192.168.148.128:/home/penguin__.
 
 Running this for some time we see:
-
-```CMD: UID=0    PID=1618   | /usr/sbin/CRON -f 
-   CMD: UID=0    PID=1619   | /bin/sh -c /home/penguin/SomeoneWhoHidesBehindAMask/.trash_old```
+```
+CMD: UID=0    PID=1618   | /usr/sbin/CRON -f 
+   CMD: UID=0    PID=1619   | /bin/sh -c /home/penguin/SomeoneWhoHidesBehindAMask/.trash_old
+   ```
 
 This means .old_trash is running on cron timely. We can add a nc reverse-shell to that file and keep listening on that port to get a root shell.
 
