@@ -28,8 +28,9 @@ Looking at the tables there is one called taskforce. They are the creds to login
 
 Trying them all only one works.
 
-__show databases;
-use \<database>;
+##MYSQL COMMANDS 
+__show databases;\n
+use \<database>;\n
 show tables;
 select * from \<table>;__
 
@@ -61,8 +62,8 @@ We can download it from the downloads dir onto the server using : __scp pspy64 p
 
 Running this for some time we see:
 ```
-CMD: UID=0    PID=1618   | /usr/sbin/CRON -f 
-   CMD: UID=0    PID=1619   | /bin/sh -c /home/penguin/SomeoneWhoHidesBehindAMask/.trash_old
+  CMD: UID=0    PID=1618   | /usr/sbin/CRON -f 
+  CMD: UID=0    PID=1619   | /bin/sh -c /home/penguin/SomeoneWhoHidesBehindAMask/.trash_old
    ```
 
 This means .old_trash is running on cron timely. We can add a nc reverse-shell to that file and keep listening on that port to get a root shell.
