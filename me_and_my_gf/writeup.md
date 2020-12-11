@@ -21,7 +21,6 @@ we can switch to root using: __su root__.
 Now we navigate over to user alice and find her secret as a hidden file. And we have root access so we can go to the root directory and read the root flag too.
 
 NOTE: If we wanted to find everyone's user credentials then we can just login into the mysql using the root creds
-
       __mysql -u root -p__.
       
       MYSQL COMMANDS:
