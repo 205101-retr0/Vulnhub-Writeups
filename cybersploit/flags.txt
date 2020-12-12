@@ -1,0 +1,3 @@
+Flag1: cybersploit{youtube.com/c/cybersploit}
+Flag2: cybersploit{https:t.me/cybersploit1}
+Flag3: cybersploit{Z3X21CW42C4 many many congratulations !}
