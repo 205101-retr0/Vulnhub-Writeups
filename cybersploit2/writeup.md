@@ -14,4 +14,6 @@ In the server we see a file called hint.txt which contains only one word docker.
 
 So we may be able to get root using docker setuid. We can copy the command from [GTFObins docker](https://gtfobins.github.io/gtfobins/docker/) under the SUID section.
 
+__docker run -v /:/mnt --rm -it alpine chroot /mnt sh__
+
 And there we have the root access. 
