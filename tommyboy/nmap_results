@@ -1,0 +1,20 @@
+# Nmap 7.91 scan initiated Wed Dec 23 01:39:00 2020 as: nmap -sS -sC -p- -oN "/home/retr0/teja file/vulnhub/toomyboy/nmap_results" 192.168.1.25
+Nmap scan report for CallahanAutoSrv01.domain.name (192.168.1.25)
+Host is up (0.000058s latency).
+Not shown: 65532 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+| ssh-hostkey: 
+|   2048 a0:ca:62:ce:f6:7e:ae:8b:62:de:0b:db:21:3f:b0:d6 (RSA)
+|   256 46:6d:4b:4b:02:86:89:27:28:5c:1d:87:10:55:3d:59 (ECDSA)
+|_  256 56:9e:71:2a:a3:83:ff:63:11:7e:94:08:dd:28:1d:46 (ED25519)
+80/tcp   open  http
+| http-robots.txt: 4 disallowed entries 
+| /6packsofb...soda /lukeiamyourfather 
+|_/lookalivelowbridge /flag-numero-uno.txt
+|_http-title: Welcome to Callahan Auto
+8008/tcp open  http
+|_http-title: KEEP OUT
+MAC Address: 08:00:27:B0:7A:EA (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Wed Dec 23 01:39:03 2020 -- 1 IP address (1 host up) scanned in 3.06 seconds

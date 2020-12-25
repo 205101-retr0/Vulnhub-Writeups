@@ -1,0 +1,7 @@
+Your password is your wife's nickname "bev" (note it's all lowercase) plus the following:
+
+* One uppercase character
+* Two numbers
+* Two lowercase characters
+* One symbol
+* The year Tommy Boy came out in theaters

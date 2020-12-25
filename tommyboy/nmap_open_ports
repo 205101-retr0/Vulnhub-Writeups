@@ -1,0 +1,12 @@
+# Nmap 7.91 scan initiated Fri Dec 25 05:00:57 2020 as: nmap -p- -oN "/home/retr0/teja file/vulnhub/nmap_open_ports" 192.168.1.13
+Nmap scan report for CallahanAutoSrv01.domain.name (192.168.1.13)
+Host is up (0.000050s latency).
+Not shown: 65531 closed ports
+PORT      STATE SERVICE
+22/tcp    open  ssh
+80/tcp    open  http
+8008/tcp  open  http
+65534/tcp open  unknown
+MAC Address: 08:00:27:10:D0:EF (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Fri Dec 25 05:00:57 2020 -- 1 IP address (1 host up) scanned in 0.74 seconds
