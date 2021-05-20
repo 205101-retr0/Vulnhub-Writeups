@@ -9,6 +9,9 @@ Easy TryHackMe box: AgentSudo
 21 			## vsftpd 3.0.3 
 `
 
+`For the http site we can use burp to change the user agent to C and get access
+`
+
 `User/Passwords:
 chris/crystal (ftp)
 james/hackerrules! (ssh)
@@ -27,10 +30,12 @@ Alien-autopsy: reverse image search(google images)
 
 
 ##New stuff
+
 `Priv-esc:
 sudo -l
 it's a sudo vuln from 2019 CVE 2019-14287
 sudo -l --> tells us we can exec /bin/bash as (james, !root)
+
 but this can be bypassed using:
 `
 
