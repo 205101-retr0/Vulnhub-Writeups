@@ -3,8 +3,7 @@
 ## Nmap scans
 
 `Open ports:
-22 		
-
+22                                                                                                                                                                 
 80			## LFI attack
 `
 
