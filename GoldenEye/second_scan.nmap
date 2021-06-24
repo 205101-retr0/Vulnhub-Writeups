@@ -1,0 +1,22 @@
+# Nmap 7.91 scan initiated Thu Jun 24 17:10:40 2021 as: nmap -sC -sV -p- -oN second_scan.nmap 10.10.244.36
+Nmap scan report for 10.10.244.36
+Host is up (0.18s latency).
+Not shown: 65531 closed ports
+PORT      STATE SERVICE     VERSION
+25/tcp    open  smtp        Postfix smtpd
+|_smtp-commands: ubuntu, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+|_ssl-date: TLS randomness does not represent time
+80/tcp    open  http        Apache httpd 2.4.7 ((Ubuntu))
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: GoldenEye Primary Admin Server
+55006/tcp open  ssl/unknown
+| ssl-cert: Subject: commonName=localhost/organizationName=Dovecot mail server
+| Not valid before: 2018-04-24T03:23:52
+|_Not valid after:  2028-04-23T03:23:52
+|_ssl-date: TLS randomness does not represent time
+55007/tcp open  pop3        Dovecot pop3d
+|_pop3-capabilities: CAPA STLS TOP UIDL SASL(PLAIN) PIPELINING USER AUTH-RESP-CODE RESP-CODES
+|_ssl-date: TLS randomness does not represent time
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jun 24 17:28:39 2021 -- 1 IP address (1 host up) scanned in 1078.84 seconds
