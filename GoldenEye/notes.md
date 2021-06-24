@@ -21,7 +21,7 @@ We know the username is boris from the source and we decoded the password.
 
 `User: boris Password: InvincibleHack3r (For the http port)`
 
-These creds don't work when we try to login into pop3 port \((pop3 command line)[https://electrictoolbox.com/pop3-commands/] \). So, we use hydra to brute-force the password there.
+These creds don't work when we try to login into pop3 port [pop3 command line](https://electrictoolbox.com/pop3-commands/). So, we use hydra to brute-force the password there.
 
 We don't anything for boris so we try again with natalya.
 
