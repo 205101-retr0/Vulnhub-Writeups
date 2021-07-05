@@ -1,0 +1,22 @@
+
+    __             __               __     
+   / /_____  _____/ /_  _______  __/ /____ 
+  / //_/ _ \/ ___/ __ \/ ___/ / / / __/ _ \
+ / ,< /  __/ /  / /_/ / /  / /_/ / /_/  __/
+/_/|_|\___/_/  /_.___/_/   \__,_/\__/\___/                                        
+
+Version: v1.0.3 (9dad6e1) - 07/05/21 - Ronnie Flathers @ropnop
+
+2021/07/05 23:55:19 >  Using KDC(s):
+2021/07/05 23:55:19 >   spookysec.local:88
+
+2021/07/05 23:55:21 >  [+] VALID USERNAME:       james@spookysec.local
+2021/07/05 23:55:33 >  [+] VALID USERNAME:       svc-admin@spookysec.local
+2021/07/05 23:55:49 >  [+] VALID USERNAME:       James@spookysec.local
+2021/07/05 23:55:54 >  [+] VALID USERNAME:       robin@spookysec.local
+2021/07/05 23:56:57 >  [+] VALID USERNAME:       darkstar@spookysec.local
+2021/07/05 23:57:40 >  [+] VALID USERNAME:       administrator@spookysec.local
+2021/07/05 23:59:00 >  [+] VALID USERNAME:       backup@spookysec.local
+2021/07/05 23:59:36 >  [+] VALID USERNAME:       paradox@spookysec.local
+2021/07/06 00:03:34 >  [+] VALID USERNAME:       JAMES@spookysec.local
+2021/07/06 00:04:45 >  [+] VALID USERNAME:       Robin@spookysec.local

@@ -1,0 +1,43 @@
+# Nmap 7.91 scan initiated Mon Jul  5 23:05:31 2021 as: nmap -Pn -sC -oN initial.nmap 10.10.14.38
+Nmap scan report for 10.10.14.38
+Host is up (0.26s latency).
+Not shown: 987 closed ports
+PORT     STATE SERVICE
+53/tcp   open  domain
+80/tcp   open  http
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: IIS Windows Server
+88/tcp   open  kerberos-sec
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+389/tcp  open  ldap
+445/tcp  open  microsoft-ds
+464/tcp  open  kpasswd5
+593/tcp  open  http-rpc-epmap
+636/tcp  open  ldapssl
+3268/tcp open  globalcatLDAP
+3269/tcp open  globalcatLDAPssl
+3389/tcp open  ms-wbt-server
+| rdp-ntlm-info: 
+|   Target_Name: THM-AD
+|   NetBIOS_Domain_Name: THM-AD
+|   NetBIOS_Computer_Name: ATTACKTIVEDIREC
+|   DNS_Domain_Name: spookysec.local
+|   DNS_Computer_Name: AttacktiveDirectory.spookysec.local
+|   Product_Version: 10.0.17763
+|_  System_Time: 2021-07-05T17:36:06+00:00
+| ssl-cert: Subject: commonName=AttacktiveDirectory.spookysec.local
+| Not valid before: 2021-07-04T17:34:48
+|_Not valid after:  2022-01-03T17:34:48
+|_ssl-date: 2021-07-05T17:36:05+00:00; 0s from scanner time.
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2021-07-05T17:36:07
+|_  start_date: N/A
+
+# Nmap done at Mon Jul  5 23:06:51 2021 -- 1 IP address (1 host up) scanned in 80.55 seconds
