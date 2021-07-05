@@ -1,6 +1,6 @@
 TryHackMe Box Attacktive Directory(AD) \(Medium\)
 
-#Enumeration
+# Enumeration
 
 Running a nmap scan we find a lot of open ports, the ports of concern here are 139/445.
 We enumerate the users using enum4linux because it's on port 139/445.
@@ -11,7 +11,7 @@ That doesn't work so well. So we can use a tool kerbute to enumerate users in wh
 
 userlist given by tryhackme for reducded execution time.
 
-#ASREPRoasting
+# ASREPRoasting
 
 Now that we have discovered a several usernames we can use a technique called ASREPRoasting, meaning if a user does not have the Kerberos preauthentication property selected it is possible to retrieve the password hash from that user.
 
@@ -22,7 +22,7 @@ We get an hash for admin that we might be able to crack. And we get a hit with j
 
 ___svc-admin: management2005___
 
-#SMB Enumeration
+# SMB Enumeration
 
 Now that we have the admin, we can find out his shares with the domain controller and we find that admin does share backup.
 
@@ -41,7 +41,7 @@ ___backup: backup2517860___
 
 Now that we have the backup share we can dump all the past creds using impacket's __secretdump.py__
 
-#Priv-esc
+# Priv-esc
 
 Now that we are in possession of the Administrator password hash. The next step will be performing a ___Pass the Hash Attack___.
 
