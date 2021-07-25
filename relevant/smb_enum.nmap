@@ -1,0 +1,38 @@
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-06-29 18:38 IST
+Nmap scan report for 10.10.110.63
+Host is up (0.18s latency).
+Not shown: 995 filtered ports
+PORT     STATE SERVICE
+80/tcp   open  http
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+
+Host script results:
+| smb-enum-sessions: 
+|_  <nobody>
+| smb-enum-shares: 
+|   account_used: guest
+|   \\10.10.110.63\ADMIN$: 
+|     Type: STYPE_DISKTREE_HIDDEN
+|     Comment: Remote Admin
+|     Anonymous access: <none>
+|     Current user access: <none>
+|   \\10.10.110.63\C$: 
+|     Type: STYPE_DISKTREE_HIDDEN
+|     Comment: Default share
+|     Anonymous access: <none>
+|     Current user access: <none>
+|   \\10.10.110.63\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: Remote IPC
+|     Anonymous access: <none>
+|     Current user access: READ/WRITE
+|   \\10.10.110.63\nt4wrksv: 
+|     Type: STYPE_DISKTREE
+|     Comment: 
+|     Anonymous access: <none>
+|_    Current user access: READ/WRITE
+
+Nmap done: 1 IP address (1 host up) scanned in 82.38 seconds
