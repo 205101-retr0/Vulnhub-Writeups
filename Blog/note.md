@@ -1,17 +1,29 @@
+# Easy THM Box
+
 machine ip : 10.10.40.170
 
+## Enumeration
+`wpscan --url HOST-IP --enumerate`
+We find a username there -- `kwheel`
+
+Running a bruteforce for the password using wpscan gives us the creds.
+`wpscan --url HOST-IP --usernames kwheel -P rockyou.txt`
 kwheel - cutiepie1			## wpscan
 
+## Exploit
 msfconsole -- goto wp_crop_rce
 
-odd setuid was /usr/sbin/checker -- which checks if ur an admin or not
+## Priv Esc
+I ran the command `find / -perm -u=s -type f 2>/dev/null` to find any unusual setuids.
 
-download that using meterpreter on download command
+Odd setuid was /usr/sbin/checker -- which checks if ur an admin or not.
 
-checker converting it to c code using ghidra we get that admin env variable needs to be anything but a empty string.
+Download that using meterpreter on download command.
 
-so we "export admin=somethinglessOffensive"
+Checker converting it to c code using ghidra we get that *admin env variable needs to be anything but a empty string*.
 
-and we can run it /usr/sbin/checker and we get root access
+So we "export admin=somethinglessOffensive"
 
-after that we can find the user.txt flag using the find command.
+We can run it `/usr/sbin/checker` and we get root access because now admin is not NULL.
+
+After that we can find the user.txt flag using the find command.
